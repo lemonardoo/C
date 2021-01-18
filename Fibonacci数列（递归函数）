@@ -1,0 +1,17 @@
+#include<stdio.h>
+long f(int n)
+{
+    long s;
+    if(n==1||n==2) return 1;
+    s=f(n-1)+f(n-2);
+    return s;
+}
+int main(void)
+{
+    int n;
+    printf("Please input n:");
+    scanf("%d",&n);
+    if(n<0) printf("error!\n");
+    else printf("第%d项Fibonacci数列的值为%ld\n",n,f(n));
+    return 0;
+}
