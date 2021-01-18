@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(void)
+{
+    int cnt=0;
+    int i,j,a[100];
+    for(i=200;i<=300;i++)
+    {
+        for(j=2;j<i;j++)
+        {
+            if(i%j==0) break;
+        }
+        if(i!=j) continue;
+        a[cnt]=i;
+        cnt++;
+    }
+    for(i=0;i<=cnt;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("cnt: %d",cnt);
+    return 0;
+}
