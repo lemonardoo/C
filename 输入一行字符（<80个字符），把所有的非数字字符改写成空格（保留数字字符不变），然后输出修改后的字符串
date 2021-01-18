@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+    int i,n;
+    char str[80];
+    gets(str);
+    n=strlen(str);
+    for(i=0;i<=n;i++)
+    {
+        if(str[i]<'0'||str[i]>'9') str[i]=' ';
+    }
+    puts(str);
+    return 0;
+}
